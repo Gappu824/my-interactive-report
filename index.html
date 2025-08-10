@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourav Mittal - Summer Training Report: Data-Driven Analysis at To-let Globe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Slate & Amber -->
+    <!-- Application Structure Plan: A single-page portfolio-style application designed to tell a story. It starts with a hero section summarizing the project's success. A sticky navigation bar allows users to jump to different sections: 'The Challenge' (problem statement), 'The Solution' (methodology), 'Interactive Dashboards' (the core results), and 'The Impact' (quantified achievements). The 'Interactive Dashboards' section is the centerpiece, using a tabbed interface. This structure is chosen over a linear report format to create an engaging, non-linear user experience that encourages exploration. It allows evaluators to quickly grasp the project's scope and dive into the most critical parts—the interactive results—making the presentation more dynamic and memorable than a static document. -->
+    <!-- Visualization & Content Choices: The application now presents the final dashboard screenshots from the source report. Each tab reveals a specific dashboard image, providing direct visual evidence of the work.
+    - Report Info: Campaign Performance KPIs -> Goal: Show final dashboard -> Viz: Static Image -> Interaction: Tab selection, Click image to open full-res link -> Justification: Directly showcases the final Power BI artifact and provides a path to view the high-quality original.
+    - Report Info: Audience Growth -> Goal: Show final dashboard -> Viz: Static Image -> Interaction: Tab selection, Click image to open full-res link -> Justification: Provides clear evidence of the year/month analytics visuals.
+    - Report Info: Regional KPIs -> Goal: Show final dashboard -> Viz: Static Image -> Interaction: Tab selection, Click image to open full-res link -> Justification: Displays the comparative regional dashboards.
+    - Report Info: Intern Productivity -> Goal: Show final dashboard -> Viz: Static Image -> Interaction: Tab selection, Click image to open full-res link -> Justification: Shows the operational tracking tools created.
+    The interaction is focused on navigating between the final visual products and allowing high-resolution viewing. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+            color: #334155; /* slate-700 */
+        }
+        .nav-link {
+            transition: color 0.3s, border-color 0.3s;
+        }
+        .tab-btn.active {
+            border-color: #f59e0b; /* amber-500 */
+            color: #f59e0b; /* amber-500 */
+            background-color: #fffbeb; /* amber-50 */
+        }
+        .dashboard-image {
+            width: 100%;
+            max-width: 900px;
+            margin: 1rem auto;
+            border-radius: 0.5rem;
+            border: 1px solid #e2e8f0; /* slate-200 */
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .dashboard-link:hover .dashboard-image {
+            transform: scale(1.02);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header id="header" class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 border-b border-slate-200">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="#hero" class="text-xl font-bold text-slate-800">Gourav Mittal</a>
+                </div>
+                <nav class="hidden md:flex md:space-x-8">
+                    <a href="#challenge" class="nav-link text-slate-600 hover:text-amber-600 border-b-2 border-transparent hover:border-amber-500 py-2">The Challenge</a>
+                    <a href="#solution" class="nav-link text-slate-600 hover:text-amber-600 border-b-2 border-transparent hover:border-amber-500 py-2">The Solution</a>
+                    <a href="#dashboards" class="nav-link text-slate-600 hover:text-amber-600 border-b-2 border-transparent hover:border-amber-500 py-2">Dashboards</a>
+                    <a href="#impact" class="nav-link text-slate-600 hover:text-amber-600 border-b-2 border-transparent hover:border-amber-500 py-2">Impact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight">
+                    Data-Driven Marketing & Performance Analysis
+                </h1>
+                <p class="mt-4 text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
+                    An interactive summary of my summer training project at To-let Globe, where I transformed fragmented data into an automated business intelligence system.
+                </p>
+                <div class="mt-8">
+                    <a href="#dashboards" class="bg-amber-500 text-white font-semibold px-8 py-3 rounded-lg hover:bg-amber-600 transition-colors shadow-lg">Explore the Dashboards</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Challenge Section -->
+        <section id="challenge" class="py-16 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800">The Challenge</h2>
+                    <p class="mt-3 text-lg text-slate-500">Identifying the core problem to drive a meaningful solution.</p>
+                </div>
+                <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-2xl font-semibold text-slate-900">Fragmented Data & Inefficient Reporting</h3>
+                    <p class="mt-4 text-slate-600">
+                        The primary challenge at To-let Globe was the absence of a centralized system for tracking key performance indicators (KPIs). Critical business data from sources like LinkedIn, website analytics, and internal team activities was scattered. This decentralization made it extremely difficult to generate cohesive insights. The process of manually aggregating this data was not only time-consuming and prone to error but also failed to provide the timely information required for agile decision-making in a fast-paced market.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Solution Section -->
+        <section id="solution" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800">The Solution</h2>
+                    <p class="mt-3 text-lg text-slate-500">A systematic approach using modern BI tools.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+                    <div class="bg-slate-50 p-8 rounded-xl">
+                        <h3 class="text-2xl font-semibold text-slate-900">Methodology & Tools</h3>
+                        <p class="mt-4 text-slate-600">
+                            To tackle the problem, I adopted a structured approach centered on powerful and appropriate technologies. The entire data processing workflow was handled using **Microsoft Excel and its integrated Power Query Editor**. This was instrumental for connecting to data sources, performing complex transformations, and cleaning data.
+                        </p>
+                        <p class="mt-4 text-slate-600">
+                            For visualization, **Microsoft Power BI** was selected as the primary business intelligence tool. Its capabilities allowed for the creation of dynamic, interactive dashboards that could present the processed data in a clear and intuitive manner.
+                        </p>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-xl">
+                        <h3 class="text-2xl font-semibold text-slate-900">Project Objectives</h3>
+                        <ul class="mt-4 space-y-3 text-slate-600 list-disc list-inside">
+                            <li>Design and develop a suite of interactive Power BI dashboards.</li>
+                            <li>Automate data collection and cleaning to reduce manual reporting time.</li>
+                            <li>Provide actionable insights into audience behavior and content performance.</li>
+                            <li>Create a transparent system for tracking internal team productivity.</li>
+                            <li>Deliver a scalable, user-friendly BI solution for all stakeholders.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Dashboards Section -->
+        <section id="dashboards" class="py-16 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800">Dashboard Showcase</h2>
+                    <p class="mt-3 text-lg text-slate-500">Explore the final dashboards from the project. Click on the tabs to view different analyses. <br><span class="text-sm text-amber-600">(Click any image to view the full-resolution version)</span></p>
+                </div>
+
+                <!-- Tab Navigation -->
+                <div class="mb-8 flex flex-wrap justify-center gap-2 sm:gap-4">
+                    <button class="tab-btn active" data-tab="marketing">Marketing Hub</button>
+                    <button class="tab-btn" data-tab="audience">Audience Analytics</button>
+                    <button class="tab-btn" data-tab="regional">Regional Performance</button>
+                    <button class="tab-btn" data-tab="internal">Internal Productivity</button>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="bg-white p-4 sm:p-8 rounded-xl shadow-lg max-w-6xl mx-auto text-center">
+                    
+                    <div data-tab-content="marketing">
+                        <h3 class="text-2xl font-semibold text-slate-900 mb-2">Centralized Marketing & Campaign Hub</h3>
+                        <p class="text-slate-600 mb-6 max-w-3xl mx-auto">This dashboard serves as a single source of truth for marketing activities, tracking key metrics across different campaigns.</p>
+                        <a href="https://postimg.cc/2LLKrrKb" target="_blank" rel="noopener noreferrer" class="dashboard-link">
+                            <img src="https://i.postimg.cc/2LLKrrKb/Screenshot-2025-08-09-181712.png" alt="Marketing Report Dashboard" class="dashboard-image">
+                        </a>
+                    </div>
+
+                    <div data-tab-content="audience" class="hidden">
+                        <h3 class="text-2xl font-semibold text-slate-900 mb-2">Audience Growth & Behavior Analysis</h3>
+                        <p class="text-slate-600 mb-6 max-w-3xl mx-auto">These reports visualize long-term trends in audience growth and user behavior, providing critical data for UX optimization.</p>
+                        <a href="https://postimg.cc/PL63DCGv" target="_blank" rel="noopener noreferrer" class="dashboard-link">
+                            <img src="https://i.postimg.cc/PL63DCGv/Screenshot-2025-08-09-184104.png" alt="Year Analytics Dashboard" class="dashboard-image">
+                        </a>
+                        <a href="https://postimg.cc/3yrfWgqH" target="_blank" rel="noopener noreferrer" class="dashboard-link">
+                            <img src="https://i.postimg.cc/3yrfWgqH/Screenshot-2025-08-09-184113.png" alt="Month Analytics Dashboard" class="dashboard-image mt-4">
+                        </a>
+                    </div>
+
+                    <div data-tab-content="regional" class="hidden">
+                         <h3 class="text-2xl font-semibold text-slate-900 mb-2">Regional Performance Analysis</h3>
+                        <p class="text-slate-600 mb-6 max-w-3xl mx-auto">This suite allows for a granular comparison of KPIs across key cities, helping to identify regional trends and allocate resources.</p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                           <a href="https://postimg.cc/XpFzPN5t" target="_blank" rel="noopener noreferrer" class="dashboard-link">
+                               <img src="https://i.postimg.cc/XpFzPN5t/Screenshot-2025-08-09-183159.png" alt="Hyderabad Dashboard" class="dashboard-image">
+                           </a>
+                           <a href="https://postimg.cc/sM40Vnwc" target="_blank" rel="noopener noreferrer" class="dashboard-link">
+                               <img src="https://i.postimg.cc/sM40Vnwc/Screenshot-2025-08-09-183226.png" alt="Kolkata Dashboard" class="dashboard-image">
+                           </a>
+                           <a href="https://postimg.cc/MnSFJkbH" target="_blank" rel="noopener noreferrer" class="dashboard-link">
+                               <img src="https://i.postimg.cc/MnSFJkbH/Screenshot-2025-08-09-183256.png" alt="Mumbai Dashboard" class="dashboard-image">
+                           </a>
+                           <a href="https://postimg.cc/nMNWT9Xv" target="_blank" rel="noopener noreferrer" class="dashboard-link">
+                               <img src="https://i.postimg.cc/nMNWT9Xv/Screenshot-2025-08-09-183344.png" alt="Gurgaon Dashboard" class="dashboard-image">
+                           </a>
+                        </div>
+                    </div>
+
+                    <div data-tab-content="internal" class="hidden">
+                        <h3 class="text-2xl font-semibold text-slate-900 mb-2">Internal Productivity Tracking</h3>
+                        <p class="text-slate-600 mb-6 max-w-3xl mx-auto">This system monitors and motivates the intern team by tracking key metrics and using gamification to foster healthy competition.</p>
+                        <a href="https://postimg.cc/dkp5WgVq" target="_blank" rel="noopener noreferrer" class="dashboard-link">
+                            <img src="https://i.postimg.cc/dkp5WgVq/Screenshot-2025-08-09-190213.png" alt="Intern of the Week Dashboard" class="dashboard-image">
+                        </a>
+                        <a href="https://postimg.cc/VdjKRGQ8" target="_blank" rel="noopener noreferrer" class="dashboard-link">
+                            <img src="https://i.postimg.cc/VdjKRGQ8/Screenshot-2025-08-09-190423.png" alt="Intern Records Dashboard" class="dashboard-image mt-4">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Section -->
+        <section id="impact" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800">Quantified Impact</h2>
+                    <p class="mt-3 text-lg text-slate-500">Delivering tangible results and strategic value.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto text-center">
+                    <div class="bg-amber-50 p-8 rounded-xl">
+                        <p class="text-4xl md:text-5xl font-extrabold text-amber-600">70%+</p>
+                        <p class="mt-2 text-lg font-medium text-slate-700">Reduction in Manual Reporting Time</p>
+                    </div>
+                    <div class="bg-amber-50 p-8 rounded-xl">
+                        <p class="text-4xl md:text-5xl font-extrabold text-amber-600">2M+</p>
+                        <p class="mt-2 text-lg font-medium text-slate-700">Social Media Impressions Analyzed</p>
+                    </div>
+                    <div class="bg-amber-50 p-8 rounded-xl">
+                        <p class="text-4xl md:text-5xl font-extrabold text-amber-600">4+</p>
+                        <p class="mt-2 text-lg font-medium text-slate-700">Suite of Interconnected Dashboards Built</p>
+                    </div>
+                </div>
+                 <div class="mt-10 max-w-3xl mx-auto text-center">
+                    <h3 class="text-2xl font-semibold text-slate-900">Conclusion & Future Scope</h3>
+                    <p class="mt-4 text-slate-600">
+                        This project successfully addressed the critical need for a centralized, data-driven reporting system at To-let Globe. The solution provides clear, actionable insights, empowering the management to make more informed strategic decisions. Future enhancements could include incorporating predictive analytics to forecast trends or integrating with CRM software for a more holistic view of the customer journey.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="bg-slate-800 text-slate-300 py-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Gourav Mittal. This interactive report was created to summarize my summer training project.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('[data-tab-content]');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const tabKey = tab.getAttribute('data-tab');
+
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+
+                    tabContents.forEach(content => {
+                        if (content.getAttribute('data-tab-content') === tabKey) {
+                            content.classList.remove('hidden');
+                        } else {
+                            content.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+            
+            tabs.forEach(button => {
+                button.classList.add('px-4', 'py-2', 'text-sm', 'sm:text-base', 'font-medium', 'text-slate-600', 'border-b-2', 'border-transparent', 'rounded-t-lg', 'transition-colors', 'hover:bg-amber-50', 'hover:text-amber-600');
+            });
+        });
+    </script>
+</body>
+</html>
